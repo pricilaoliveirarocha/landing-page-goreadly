@@ -675,6 +675,10 @@ details p { padding: 0 20px 20px; font-size: .9375rem; color: var(--color-text-s
   .footer nav { margin-inline: 0; }
 }
 
+@media (max-width: 640px) {
+  .brand img { width: 132px; }
+}
+
 @media (max-width: 380px) {
   .brand img { width: 96px; }
   .button-small { padding: 0 14px; }
