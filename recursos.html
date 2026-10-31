@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Leitura, destaques, notas, biblioteca, Ler depois, quiz, insights e personalização: conheça os recursos do GoReadly.">
+  <meta name="theme-color" content="#F8F9F5">
+  <title>Recursos — GoReadly</title>
+  <link rel="icon" href="./assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="preload" href="./assets/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('motion-ready')},3000)</script>
+  <script src="./assets/vendor/gsap.min.js" defer></script>
+  <script src="./assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Ir para o conteúdo</a>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="book" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+    <symbol id="pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.400 3.600a2 2 0 0 1 3 3L7.400 18.500 3 20l1.400-4.400z"/></symbol>
+    <symbol id="file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M16 13H8m8 4H8m2-8H8"/></symbol>
+    <symbol id="bookmark" viewBox="0 0 24 24"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></symbol>
+    <symbol id="folder" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.900a2 2 0 0 1-1.700-.9l-.8-1.200A2 2 0 0 0 7.900 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+    <symbol id="shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.500 7.500-7.700 9a1 1 0 0 1-.7 0C7.500 20.500 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.500-1.200 6.200-2.700a1 1 0 0 1 1.300 0C14.500 3.800 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="chart" viewBox="0 0 24 24"><path d="M5 21v-6M12 21V9M19 21V3"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="graduation" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12.500V17c3 2.500 9 2.500 12 0v-4.500M22 10v6"/></symbol>
+    <symbol id="palette" viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 1 10-10c0 2.800-2.200 4-4.500 4H16a2 2 0 0 0-1.500 3.300c.6.900.1 2.700-2.500 2.700Z"/><path d="M7.500 11.500h.01M10.500 7.500h.01M15.500 8h.01"/></symbol>
+    <symbol id="bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.300 21a1.900 1.900 0 0 0 3.400 0"/></symbol>
+    <symbol id="instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/></symbol>
+    <symbol id="linkedin" viewBox="0 0 24 24"><path d="M4 9v11M4 4v.01M10 20V9m0 5c0-6 10-6 10 0v6"/></symbol>
+    <symbol id="youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/></symbol>
+  </defs></svg>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand" aria-label="GoReadly — início"><img src="./assets/goreadly-logo.png" alt="GoReadly" width="132" height="44"></a>
+      <nav class="navigation" id="mobile-navigation" aria-label="Navegação principal">
+        <a href="./index.html#inicio">Início</a>
+        <a href="./recursos.html" aria-current="page">Recursos</a>
+        <a href="./seguranca.html">Segurança</a>
+        <a href="./faq.html">FAQ</a>
+        <a href="./valores.html">Valores</a>
+        <a class="navigation-login" href="/login">Entrar</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-login" href="/login">Entrar</a>
+        <a class="button button-small" href="/cadastro">Começar agora <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-navigation"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio" tabindex="-1">
+    <section class="page-hero" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="eyebrow">Recursos</p>
+        <h1 id="hero-title">Tudo para<br><em>aprender melhor.</em></h1>
+        <p class="hero-lead">Leia com foco, organize o que encontrar e acompanhe sua evolução, com artigos selecionados pela equipe do GoReadly.</p>
+        <div class="hero-actions"><a class="button" href="/cadastro">Começar agora <svg aria-hidden="true"><use href="#arrow"/></svg></a><a class="button button-outline" href="./valores.html">Ver valores</a></div>
+      </div>
+    </section>
+
+    <section class="section section-tight feature-group" aria-labelledby="group-read">
+      <div class="container">
+        <div class="resources-heading">
+          <p class="eyebrow">Ler</p>
+          <h2 id="group-read">Leia com foco e guarde o que importa</h2>
+        </div>
+        <div class="features resources">
+          <article class="card feature">
+            <header class="feature-heading"><span class="icon-box"><svg aria-hidden="true"><use href="#book"/></svg></span><div><h3>Leitura fluida</h3><p>Uma experiência limpa, com foco total no que importa.</p></div></header>
+            <div class="feature-preview preview-article" aria-hidden="true">
+              <div class="preview-toolbar"><span>A−</span><span>A+</span></div>
+              <b>O que muda quando lemos devagar</b>
+              <div class="preview-photo photo-mountain"></div>
+            </div>
+          </article>
+          <article class="card feature">
+            <header class="feature-heading"><span class="icon-box"><svg aria-hidden="true"><use href="#pen"/></svg></span><div><h3>Destaques</h3><p>Marque os trechos mais importantes e revise quando precisar.</p></div></header>
+            <div class="feature-preview preview-highlight" data-sweep aria-hidden="true">
+              <p class="quote-green"><mark>O conhecimento se torna mais poderoso quando é aplicado no dia a dia.</mark></p>
+              <div class="color-picker"><i class="is-selected"></i><i class="swatch-yellow"></i><i class="swatch-purple"></i></div>
+            </div>
+          </article>
+          <article class="card feature">
+            <header class="feature-heading"><span class="icon-box"><svg aria-hidden="true"><use href="#file"/></svg></span><div><h3>Notas</h3><p>Registre suas ideias e desenvolva seu próprio pensamento.</p></div></header>
+            <div class="feature-preview preview-note" aria-hidden="true">
+              <div class="preview-toolbar preview-toolbar-start"><span><b>B</b></span><span><em>I</em></span></div>
+              <p class="note-editor">Isso se conecta ao conceito de aprendizado ativo. Vale aplicar essa ideia na prática.</p>
+            </div>
+          </article>
+          <article class="card feature">
+            <header class="feature-heading"><span class="icon-box"><svg aria-hidden="true"><use href="#file"/></svg></span><div><h3>PDF original <span class="plan-tag plan-tag-premium">Premium</span></h3><p>Leia ou baixe o original quando a licença do artigo permitir.</p></div></header>
+            <div class="feature-preview preview-sources" aria-hidden="true">
+              <dl><div><dt>Ler PDF</dt><dd>Abre em nova aba</dd></div><div><dt>Baixar</dt><dd>Até 20 MB</dd></div></dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight feature-group" aria-labelledby="group-organize">
+      <div class="container">
+        <div class="resources-heading">
+          <p class="eyebrow">Organizar</p>
+          <h2 id="group-organize">Tudo no seu lugar</h2>
+        </div>
+        <div class="features resources">
+          <article class="card feature">
+            <header class="feature-heading"><span class="icon-box"><svg aria-hidden="true"><use href="#bookmark"/></svg></span><div><h3>Biblioteca</h3><p>Todos os seus artigos em um só lugar, com filtros.</p></div></header>
+            <div class="feature-preview preview-library" aria-hidden="true">
+              <div class="chips"><span class="is-selected">Todos</span><span>Lidos</span><span>Ler depois</span></div>
+              <div class="library-item"><span class="preview-photo photo-mountain"></span><p><b>O que muda quando lemos devagar</b><small>Ciência · 6 min</small></p></div>
+              <div class="library-item"><span class="preview-photo photo-statue"></span><p><b>Pequenos hábitos, grandes mudanças</b><small>Psicologia · 8 min</small></p></div>
+            </div>
+          </article>
+          <article class="card feature">
+            <header class="feature-heading"><span class="icon-box"><svg aria-hidden="true"><use href="#clock"/></svg></span><div><h3>Ler depois</h3><p>Uma fila separada dos salvos, que se esvazia conforme você lê.</p></div></header>
+            <div class="feature-preview preview-library" aria-hidden="true">
+              <div class="chips"><span>Todos</span><span class="is-selected">Ler depois</span></div>
+              <div class="library-item"><span class="preview-photo photo-library"></span><p><b>Como a memória se forma</b><small>Ciência · 7 min</small></p></div>
+            </div>
+          </article>
+          <article class="card feature">
+            <header class="feature-heading"><span class="icon-box"><svg aria-hidden="true"><use href="#folder"/></svg></span><div><h3>Coleções <span class="plan-tag plan-tag-premium">Premium</span></h3><p>Crie coleções por tema e monte sua própria biblioteca.</p></div></header>
+            <div class="feature-preview preview-collections" aria-hidden="true">
+              <div><span class="preview-photo photo-mountain"></span><b>Ciência</b><small>12 artigos</small></div>
+              <div><span class="preview-photo photo-statue"></span><b>Psicologia</b><small>8 artigos</small></div>
+              <div><span class="preview-photo photo-library"></span><b>Produtividade</b><small>10 artigos</small></div>
+            </div>
+          </article>
+          <article class="card feature">
+            <header class="feature-heading"><span class="icon-box"><svg aria-hidden="true"><use href="#shield"/></svg></span><div><h3>Fontes confiáveis</h3><p>Curadoria da equipe, com créditos e licença de cada artigo.</p></div></header>
+            <div class="feature-preview preview-sources" aria-hidden="true">
+              <dl>
+                <div><dt>Fonte</dt><dd>Publicação original</dd></div>
+                <div><dt>Autoria</dt><dd>Créditos preservados</dd></div>
+                <div><dt>Licença</dt><dd>Conferida por artigo</dd></div>
+                <div><dt>DOI</dt><dd>Quando disponível</dd></div>
+              </dl>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight feature-group" aria-labelledby="group-grow">
+      <div class="container">
+        <div class="resources-heading">
+          <p class="eyebrow">Evoluir</p>
+          <h2 id="group-grow">Acompanhe o que você aprende</h2>
+        </div>
+        <div class="features resources">
+          <article class="card feature">
+            <header class="feature-heading"><span class="icon-box"><svg aria-hidden="true"><use href="#chart"/></svg></span><div><h3>Insights de leitura <span class="plan-tag plan-tag-premium">Premium</span></h3><p>Acompanhe seu progresso e sua evolução ao longo do tempo.</p></div></header>
+            <div class="feature-preview preview-insights">
+              <dl class="insight-tiles">
+                <div><dt>Artigos lidos</dt><dd>18</dd></div>
+                <div><dt>Tempo de leitura</dt><dd>12h 32m</dd></div>
+              </dl>
+              <ol class="week-bars" role="img" aria-label="Exemplo ilustrativo de artigos lidos por semana: semana 1, 3 artigos; semana 2, 5; semana 3, 4; semana 4, 6.">
+                <li style="--value:3"><b>3</b><i></i><small>Sem. 1</small></li>
+                <li style="--value:5"><b>5</b><i></i><small>Sem. 2</small></li>
+                <li style="--value:4"><b>4</b><i></i><small>Sem. 3</small></li>
+                <li style="--value:6"><b>6</b><i></i><small>Sem. 4</small></li>
+              </ol>
+            </div>
+          </article>
+          <article class="card feature">
+            <header class="feature-heading"><span class="icon-box"><svg aria-hidden="true"><use href="#graduation"/></svg></span><div><h3>Quiz de aprendizado <span class="plan-tag plan-tag-premium">Premium</span></h3><p>Ao terminar um artigo, responda perguntas e valide sua leitura.</p></div></header>
+            <div class="feature-preview preview-quiz" aria-hidden="true">
+              <p><b>Qual é a ideia central do texto?</b></p>
+              <span class="quiz-option is-selected">Ler devagar melhora a atenção</span>
+              <span class="quiz-option">Ler rápido é sempre melhor</span>
+            </div>
+          </article>
+          <article class="card feature">
+            <header class="feature-heading"><span class="icon-box"><svg aria-hidden="true"><use href="#bell"/></svg></span><div><h3>Notificações</h3><p>Novos artigos, lembrete no seu horário e aviso de sequência.</p></div></header>
+            <div class="feature-preview preview-note" aria-hidden="true">
+              <p class="note note-green">Novo artigo do seu interesse</p>
+              <p class="note">Hora da sua leitura</p>
+            </div>
+          </article>
+          <article class="card feature">
+            <header class="feature-heading"><span class="icon-box"><svg aria-hidden="true"><use href="#palette"/></svg></span><div><h3>Personalização <span class="plan-tag plan-tag-premium">Premium</span></h3><p>Escolha cores, estilo da leitura e o que aparece no início.</p></div></header>
+            <div class="feature-preview preview-accents" aria-hidden="true">
+              <i style="background:#123D35"></i><i style="background:#005BFC"></i><i style="background:#8918F7"></i><i style="background:#C60475"></i><i style="background:#AF4E03"></i><i style="background:#65707D"></i>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="container closing-inner">
+        <div>
+          <p class="eyebrow">Pronto para ir mais longe?</p>
+          <h2 id="closing-title">Transforme sua<br><em>forma de aprender.</em></h2>
+        </div>
+        <div class="closing-aside">
+          <p>O GoReadly está em desenvolvimento, e os recursos podem evoluir até o lançamento.</p>
+          <a class="button" href="./valores.html">Ver valores <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="./index.html" class="brand" aria-label="GoReadly — início"><img src="./assets/goreadly-logo.png" alt="GoReadly" width="105" height="35"></a>
+        <p>Conhecimento para uma vida mais consciente.</p>
+      </div>
+      <nav aria-label="Navegação do rodapé">
+        <a href="./index.html#inicio">Início</a>
+        <a href="./recursos.html">Recursos</a>
+        <a href="./seguranca.html">Segurança</a>
+        <a href="./faq.html">FAQ</a>
+        <a href="./valores.html">Valores</a>
+      </nav>
+      <div class="socials" role="group" aria-label="Redes sociais — em breve">
+        <svg role="img" aria-label="Instagram"><use href="#instagram"/></svg>
+        <svg role="img" aria-label="LinkedIn"><use href="#linkedin"/></svg>
+        <svg role="img" aria-label="YouTube"><use href="#youtube"/></svg>
+      </div>
+      <p class="copyright">© <span id="year">2026</span> GoReadly. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

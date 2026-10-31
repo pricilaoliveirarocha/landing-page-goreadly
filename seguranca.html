@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça como o GoReadly protege contas e dados pessoais: o que já existe hoje e o que está no plano até o lançamento.">
+  <meta name="theme-color" content="#F8F9F5">
+  <title>Segurança — GoReadly</title>
+  <link rel="icon" href="./assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="preload" href="./assets/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('motion-ready')},3000)</script>
+  <script src="./assets/vendor/gsap.min.js" defer></script>
+  <script src="./assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Ir para o conteúdo</a>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.500 7.500-7.700 9a1 1 0 0 1-.7 0C7.500 20.500 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.500-1.200 6.200-2.700a1 1 0 0 1 1.300 0C14.500 3.800 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="login" viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></symbol>
+    <symbol id="user-check" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></symbol>
+    <symbol id="pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.400 3.600a2 2 0 0 1 3 3L7.400 18.500 3 20l1.400-4.400z"/></symbol>
+    <symbol id="download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+    <symbol id="trash" viewBox="0 0 24 24"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+    <symbol id="bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.300 21a1.900 1.900 0 0 0 3.400 0"/></symbol>
+    <symbol id="sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
+    <symbol id="chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/></symbol>
+    <symbol id="linkedin" viewBox="0 0 24 24"><path d="M4 9v11M4 4v.01M10 20V9m0 5c0-6 10-6 10 0v6"/></symbol>
+    <symbol id="youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/></symbol>
+  </defs></svg>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand" aria-label="GoReadly — início"><img src="./assets/goreadly-logo.png" alt="GoReadly" width="132" height="44"></a>
+      <nav class="navigation" id="mobile-navigation" aria-label="Navegação principal">
+        <a href="./index.html#inicio">Início</a>
+        <a href="./recursos.html">Recursos</a>
+        <a href="./seguranca.html" aria-current="page">Segurança</a>
+        <a href="./faq.html">FAQ</a>
+        <a href="./valores.html">Valores</a>
+        <a class="navigation-login" href="/login">Entrar</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-login" href="/login">Entrar</a>
+        <a class="button button-small" href="/cadastro">Começar agora <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-navigation"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio" tabindex="-1">
+    <section class="page-hero" aria-labelledby="hero-title">
+      <div class="container">
+        <p class="eyebrow">Segurança e privacidade</p>
+        <h1 id="hero-title">Seus dados,<br><em>sob o seu controle.</em></h1>
+        <p class="hero-lead">Protegemos sua conta e seus dados desde o início do projeto, e dizemos com clareza o que já existe e o que ainda está a caminho.</p>
+      </div>
+    </section>
+
+    <section class="section-pricing" aria-label="Nossos compromissos">
+      <div class="container">
+        <ul class="promise-grid">
+          <li class="card promise"><span class="icon-box icon-box-large"><svg aria-hidden="true"><use href="#pen"/></svg></span><h2>O que é seu é seu</h2><p>Notas e destaques são pessoais, e o servidor confere o proprietário em cada operação.</p></li>
+          <li class="card promise"><span class="icon-box icon-box-large"><svg aria-hidden="true"><use href="#sliders"/></svg></span><h2>Você decide</h2><p>Exporte seus dados ou exclua sua conta quando quiser, direto nas configurações.</p></li>
+          <li class="card promise"><span class="icon-box icon-box-large"><svg aria-hidden="true"><use href="#shield"/></svg></span><h2>Sem promessa vazia</h2><p>Mostramos o que já está pronto e marcamos o que ainda é apenas um plano.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="moments-title">
+      <div class="container">
+        <div class="resources-heading"><h2 id="moments-title">O que já protege sua conta</h2></div>
+        <div class="security-grid">
+          <article class="card security-card"><span class="icon-box icon-box-large"><svg aria-hidden="true"><use href="#lock"/></svg></span><div><h3>Senhas protegidas</h3><p>Nunca ficam em texto puro: são guardadas com hash.</p></div></article>
+          <article class="card security-card"><span class="icon-box icon-box-large"><svg aria-hidden="true"><use href="#clock"/></svg></span><div><h3>Limite de tentativas</h3><p>Login e cadastro têm limites para dificultar abusos.</p></div></article>
+          <article class="card security-card"><span class="icon-box icon-box-large"><svg aria-hidden="true"><use href="#login"/></svg></span><div><h3>Entrada com Google</h3><p>Uma forma rápida de entrar, e você também cria uma senha própria.</p></div></article>
+          <article class="card security-card"><span class="icon-box icon-box-large"><svg aria-hidden="true"><use href="#user-check"/></svg></span><div><h3>Acesso administrativo</h3><p>Áreas restritas são verificadas no servidor, não só na tela.</p></div></article>
+          <article class="card security-card"><span class="icon-box icon-box-large"><svg aria-hidden="true"><use href="#pen"/></svg></span><div><h3>Catálogo revisado</h3><p>Só a equipe publica artigos. Usuários não enviam conteúdo ao catálogo.</p></div></article>
+          <article class="card security-card"><span class="icon-box icon-box-large"><svg aria-hidden="true"><use href="#shield"/></svg></span><div><h3>Entradas validadas</h3><p>Os dados recebidos são conferidos no servidor antes do uso.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-labelledby="pillars-title">
+      <div class="container">
+        <div class="features-intro">
+          <h2 id="pillars-title">Como protegemos suas informações</h2>
+          <p>Cada camada existe para que uma falha isolada não comprometa o sistema inteiro. É o que chamamos de defesa em profundidade.</p>
+        </div>
+        <ol class="pillars" data-pillars>
+          <li class="pillars-track" aria-hidden="true"><span></span></li>
+          <li class="pillar"><span class="pillar-number" aria-hidden="true">1</span><h3>Autenticação</h3><p>Cada requisição privada precisa de uma sessão válida.</p></li>
+          <li class="pillar"><span class="pillar-number" aria-hidden="true">2</span><h3>Autorização</h3><p>O servidor confere o que cada perfil pode fazer.</p></li>
+          <li class="pillar"><span class="pillar-number" aria-hidden="true">3</span><h3>Validação</h3><p>As entradas são verificadas no servidor antes do uso.</p></li>
+          <li class="pillar"><span class="pillar-number" aria-hidden="true">4</span><h3>Limites</h3><p>Rotas sensíveis barram pedidos em excesso.</p></li>
+          <li class="pillar"><span class="pillar-number" aria-hidden="true">5</span><h3>Testes</h3><p>Testes automatizados cobrem as regras de acesso às contas e aos dados.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-tight" aria-labelledby="control-title">
+      <div class="container">
+        <div class="resources-heading">
+          <h2 id="control-title">Você no controle</h2>
+          <p class="control-lead">Tudo o que está disponível fica em Configurações, na sua conta.</p>
+        </div>
+        <ul class="control-list control-list-wide" aria-labelledby="control-title">
+            <li class="card"><span class="icon-box"><svg aria-hidden="true"><use href="#download"/></svg></span><div><h3>Exportar seus dados</h3><span class="plan-tag plan-tag-ready">Disponível</span></div></li>
+            <li class="card"><span class="icon-box"><svg aria-hidden="true"><use href="#trash"/></svg></span><div><h3>Excluir sua conta</h3><span class="plan-tag plan-tag-ready">Disponível</span></div></li>
+            <li class="card"><span class="icon-box"><svg aria-hidden="true"><use href="#bell"/></svg></span><div><h3>Gerenciar notificações</h3><span class="plan-tag plan-tag-ready">Disponível</span></div></li>
+            <li class="card"><span class="icon-box"><svg aria-hidden="true"><use href="#sliders"/></svg></span><div><h3>Controlar consentimentos</h3><span class="plan-tag">Planejado</span></div></li>
+          </ul>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="container pricing-faq">
+        <div class="faq">
+          <h2>Perguntas sobre segurança</h2>
+          <details class="card" open><summary>Como minha senha é guardada? <svg aria-hidden="true"><use href="#chevron"/></svg></summary><p>Com hash, pelos mecanismos nativos do framework. A senha nunca fica em texto puro.</p></details>
+          <details class="card"><summary>Quem pode publicar artigos? <svg aria-hidden="true"><use href="#chevron"/></svg></summary><p>Somente a equipe administrativa. A permissão é verificada no servidor em cada ação.</p></details>
+          <details class="card"><summary>Minhas notas e destaques são privados? <svg aria-hidden="true"><use href="#chevron"/></svg></summary><p>Sim. Suas notas e seus destaques são pessoais, e o servidor confere o proprietário em cada operação. Nem a administração os vê ao gerenciar contas.</p></details>
+          <details class="card"><summary>E os dados da minha foto? <svg aria-hidden="true"><use href="#chevron"/></svg></summary><p>A imagem é reconstruída no envio, o que remove metadados como a localização. Ao trocar a foto ou excluir a conta, o arquivo é apagado.</p></details>
+          <details class="card"><summary>O GoReadly segue a LGPD? <svg aria-hidden="true"><use href="#chevron"/></svg></summary><p>O produto está sendo desenvolvido com os princípios da LGPD, como minimização de dados e finalidade clara. Mais informações sobre privacidade estarão disponíveis antes do lançamento.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="container closing-inner">
+        <div>
+          <p class="eyebrow">Aprender com tranquilidade</p>
+          <h2 id="closing-title">Conhecimento é melhor<br><em>quando você se sente seguro.</em></h2>
+        </div>
+        <div class="closing-aside">
+          <p>O GoReadly está em desenvolvimento, e esta página acompanhará cada avanço até o lançamento.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="./index.html" class="brand" aria-label="GoReadly — início"><img src="./assets/goreadly-logo.png" alt="GoReadly" width="105" height="35"></a>
+        <p>Conhecimento para uma vida mais consciente.</p>
+      </div>
+      <nav aria-label="Navegação do rodapé">
+        <a href="./index.html#inicio">Início</a>
+        <a href="./recursos.html">Recursos</a>
+        <a href="./seguranca.html">Segurança</a>
+        <a href="./faq.html">FAQ</a>
+        <a href="./valores.html">Valores</a>
+      </nav>
+      <div class="socials" role="group" aria-label="Redes sociais — em breve">
+        <svg role="img" aria-label="Instagram"><use href="#instagram"/></svg>
+        <svg role="img" aria-label="LinkedIn"><use href="#linkedin"/></svg>
+        <svg role="img" aria-label="YouTube"><use href="#youtube"/></svg>
+      </div>
+      <p class="copyright">© <span id="year">2026</span> GoReadly. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
