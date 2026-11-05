@@ -43,6 +43,8 @@
   --shadow-card: none;
   --shadow-raised: 0 8px 24px rgb(27 48 42 / 6%);
   --transition-default: 200ms ease;
+  --ease-soft: cubic-bezier(.22, .61, .36, 1);
+  --transition-card: 320ms var(--ease-soft);
   --gutter: clamp(20px, 4vw, 48px);
 }
 
@@ -293,7 +295,7 @@ h1 {
   align-items: center;
   gap: 20px;
   padding: 28px 24px 28px 28px;
-  transition: box-shadow var(--transition-default), transform var(--transition-default);
+  transition: box-shadow var(--transition-card), transform var(--transition-card);
 }
 .step-number {
   position: absolute;
@@ -325,7 +327,7 @@ h1 {
   display: flex;
   flex-direction: column;
   padding: 16px;
-  transition: box-shadow var(--transition-default), transform var(--transition-default);
+  transition: box-shadow var(--transition-card), transform var(--transition-card);
 }
 .feature-heading { display: flex; gap: 12px; margin-bottom: 16px; }
 .feature-heading h3 { font-size: 1rem; line-height: 1.35; }
@@ -346,7 +348,7 @@ h1 {
   background-image: url('./assets/collections.jpg');
   background-repeat: no-repeat;
   background-size: 300% 100%;
-  transition: transform 250ms ease;
+  transition: transform 480ms var(--ease-soft);
 }
 .photo-mountain { background-position: 0 50%; }
 .photo-statue { background-position: 50% 50%; }
@@ -596,7 +598,7 @@ details p { padding: 0 20px 20px; font-size: .9375rem; color: var(--color-text-s
   .button:hover svg:not(.icon-play), .features-more:hover svg { transform: translateX(3px); }
   .button:active { transform: scale(.985); }
   .step:hover, .feature:hover { transform: translateY(-2px); }
-  .feature:hover .preview-photo { transform: scale(1.03); }
+  .feature:hover .preview-photo { transform: scale(1.015); }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
