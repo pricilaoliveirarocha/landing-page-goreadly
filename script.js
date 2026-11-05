@@ -115,7 +115,7 @@ if (window.gsap) {
         if (document.body.hasAttribute('data-calm')) return undefined;
 
         // clearProps devolve o controle ao CSS, de onde vêm os estados de hover.
-        const reveal = { y: 24, autoAlpha: 0, duration: 0.7, ease: 'power3.out', clearProps: 'all' };
+        const reveal = { y: 12, autoAlpha: 0, duration: 0.6, ease: 'power2.out', clearProps: 'all' };
         const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
         const cleanups = [];
 
@@ -181,33 +181,31 @@ if (window.gsap) {
             start: 'top 90%',
             onEnter: (elements) => {
                 gsap.set(elements, { transition: 'none' });
-                gsap.from(elements, { ...reveal, stagger: 0.08 });
+                gsap.from(elements, { ...reveal, stagger: 0.06 });
             },
         });
 
-        // Cards de recurso se levantam como páginas, e o conteúdo aparece depois.
+        // Cards de recurso sobem de leve, e o conteúdo aparece logo depois.
         ScrollTrigger.batch('.feature', {
             once: true,
             start: 'top 88%',
             onEnter: (elements) => {
                 gsap.set(elements, { transition: 'none' });
                 gsap.from(elements, {
-                    y: 36,
-                    rotateX: -14,
-                    transformPerspective: 1000,
-                    transformOrigin: '50% 100%',
+                    y: 14,
                     autoAlpha: 0,
-                    duration: 0.9,
-                    ease: 'power3.out',
-                    stagger: 0.1,
+                    duration: 0.6,
+                    ease: 'power2.out',
+                    stagger: 0.07,
                     clearProps: 'all',
                 });
                 elements.forEach((feature, index) => {
                     gsap.from(feature.querySelectorAll('.feature-preview > *'), {
                         autoAlpha: 0,
-                        duration: 0.5,
-                        stagger: 0.09,
-                        delay: 0.35 + index * 0.1,
+                        duration: 0.4,
+                        ease: 'power1.out',
+                        stagger: 0.06,
+                        delay: 0.2 + index * 0.07,
                         clearProps: 'opacity,visibility',
                     });
                 });
@@ -217,7 +215,7 @@ if (window.gsap) {
         // Passos entram em sequência.
         gsap.utils.toArray('.step').forEach((step, index) => {
             gsap.set(step, { transition: 'none' });
-            gsap.from(step, { ...reveal, delay: index * 0.1, scrollTrigger: { trigger: '.steps', start: 'top 88%', once: true } });
+            gsap.from(step, { ...reveal, delay: index * 0.07, scrollTrigger: { trigger: '.steps', start: 'top 88%', once: true } });
         });
 
         // Pilares: a linha acompanha a rolagem e acende cada etapa ao alcançá-la.
